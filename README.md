@@ -49,6 +49,8 @@ sudo systemctl restart apache2
 If you encounter a `500 Internal Server Error` after setup, ensure Apache has permission to write to Laravel's storage and cache directories:
 
 ```bash
+sudo chown -R www-data:www-data /var/www/html
+
 sudo chown -R www-data:www-data /var/www/html/your-project-folder/storage
 sudo chown -R www-data:www-data /var/www/html/your-project-folder/bootstrap/cache
 ```
